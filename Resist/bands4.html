@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resistor App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="ohm">
+    <p class="resist">
+      R
+    </p>
+    <input class="resist-input" type="text">
+    <select class="resist-ohm" name="" id="">
+      <option value="">Ω</option>
+      <option value="">kΩ</option>
+    </select>
+    <select class="resist-purcent" name="" id="">
+      <option value="">±5%</option>
+    </select>
+  </div>
+  <div class="resistance-container">
+    <div class="resistance">
+      <img class="resist-vierge" src="img/resist.png" alt="">
+      <div class="resistor-bands">
+        <div class="band band1">
+          <div class="value">-</div>
+          <div class="band-connector"></div>
+        </div>
+        <div class="band band2">
+          <div class="value">-</div>
+          <div class="band-connector"></div>
+        </div>
+        <div class="band band3">
+          <div class="value">-</div>
+          <div class="band-connector"></div>
+        </div>
+        <div class="band band4">
+          <div class="value">-</div>
+          <div class="band-connector"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="resist-tab">
+    
+    <div class="color-select">
+      <select>
+        <option value="" disabled selected>Anneau 1</option>
+        <option value="0" style="background-color: #000; color: #fff;">Noir</option>
+        <option value="1" style="background-color: #964b00; color: #fff;">Marron</option>
+        <option value="2" style="background-color: #ff0000; color: #fff;">Rouge</option>
+        <option value="3" style="background-color: #FFA500; color: #fff;">Orange</option>
+        <option value="4" style="background-color: #FFFF00; color: #000;">Jaune</option>
+        <option value="5" style="background-color: #02c602; color: #fff;">Vert</option>
+        <option value="6" style="background-color: #0000FF; color: #fff;">Bleu</option>
+        <option value="7" style="background-color: #7F00FF; color: #fff;">Violet</option>
+        <option value="8" style="background-color: #9B9B9B; color: #fff;">Gris</option>
+        <option value="9" style="background-color: #fff; color: #000;">Blanc</option>
+
+      </select>
+    </div>
+    <div class="color-select">
+      <select>
+        <option value="" disabled selected>Anneau 2</option>
+        <option value="0" style="background-color: #000; color: #fff;">Noir</option>
+        <option value="1" style="background-color: #964b00; color: #fff;">Marron</option>
+        <option value="2" style="background-color: #ff0000; color: #fff;">Rouge</option>
+        <option value="3" style="background-color: #FFA500; color: #fff;">Orange</option>
+        <option value="4" style="background-color: #FFFF00; color: #000;">Jaune</option>
+        <option value="5" style="background-color: #02c602; color: #fff;">Vert</option>
+        <option value="6" style="background-color: #0000FF; color: #fff;">Bleu</option>
+        <option value="7" style="background-color: #7F00FF; color: #fff;">Violet</option>
+        <option value="8" style="background-color: #9B9B9B; color: #fff;">Gris</option>
+        <option value="9" style="background-color: #fff; color: #000;">Blanc</option>
+
+      </select>
+    </div>
+    <div class="color-select">
+      <select>
+        <option value="" disabled selected>Multiplicateur</option>
+        <option value="x1Ω" style="background-color: #000; color: #fff;">Noir</option>
+        <option value="x10Ω" style="background-color: #964b00; color: #fff;">Marron</option>
+        <option value="x100Ω" style="background-color: #ff0000; color: #fff;">Rouge</option>
+        <option value="x1kΩ" style="background-color: #FFA500; color: #fff;">Orange</option>
+        <option value="x10kΩ" style="background-color: #FFFF00; color: #000;">Jaune</option>
+        <option value="x100kΩ" style="background-color: #02c602; color: #fff;">Vert</option>
+        <option value="x1MΩ" style="background-color: #0000FF; color: #fff;">Bleu</option>
+        <option value="x10MΩ" style="background-color: #7F00FF; color: #fff;">Violet</option>
+        <option value="x100MΩ" style="background-color: #9B9B9B; color: #fff;">Gris</option>
+        <option value="x1GΩ" style="background-color: #fff; color: #000;">Blanc</option>
+        <option value="x0.1Ω" style="background-color: #FFD700; color: #000;">Or</option>
+        <option value="x0.01Ω" style="background-color: #C0C0C0; color: #000;">Argent</option>
+
+      </select>
+    </div>
+    <div class="color-select">
+      <select>
+        <option value="" disabled selected>Tolérance</option>
+        <option value="±1%" style="background-color: #964b00; color: #fff;">Marron</option>
+        <option value="±2%" style="background-color: #ff0000; color: #fff;">Rouge</option>
+        <option value="±0.5%" style="background-color: #02c602; color: #fff;">Vert</option>
+        <option value="±0.25%" style="background-color: #0000FF; color: #fff;">Bleu</option>
+        <option value="±0.1%" style="background-color: #7F00FF; color: #fff;">Violet</option>
+        <option value="±0.05%" style="background-color: #9B9B9B; color: #fff;">Gris</option>
+        <option value="±5%" style="background-color: #FFD700; color: #000;">Or</option>
+        <option value="±10%" style="background-color: #C0C0C0; color: #000;">Argent</option>
+
+      </select>
+    </div>
+    
+    
+    
+  </div>
+
+
+  <script src="js.js"></script>
+</body>
+
+</html>
