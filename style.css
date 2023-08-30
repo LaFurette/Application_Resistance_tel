@@ -78,7 +78,7 @@ body {
   .resist-purcent {
     appearance: none;
     background-color: #282727;
-    padding: 7px;
+    padding: 9px 7px;
     width: 70px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -87,12 +87,13 @@ body {
     margin: 0 0.4rem;
     text-align-last: center; 
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
   }
   .resist-ohm option,
   .resist-purcent option {
-    font-size: 20px;
+    font-size: 13px;
     font-weight: bold;
+    max-width: 100%;
   }
   
   .resist-ohm::-ms-expand,
@@ -120,9 +121,9 @@ body {
     position: absolute;
     background-color: #e9e9e9;
     text-align: center ;
-    padding: 0 5px;
+    padding: 1px 4px;
     height: 15px;
-    left: -10px;
+    left: -7px;
     top: 120px ;
     min-width: 20px;
     border-radius: 5px;
@@ -130,17 +131,25 @@ body {
   }
 
   .band1 {
-    left: 27%;
+    left: 25%;
   }
   .band2 {
-    left: 37%;
+    left: 33%;
   }
   .band3 {
-    left: 48%;
+    left: 50%;
   }
-  
   .band4 {
-    left: 70%;
+    left: 72%;
+  }
+  .band5 {
+    left: 41%;
+  }
+  .band6 {
+    left: 72%;
+  }
+  .resist6.band4 {
+    left: 62.5%;
   }
 
 
@@ -163,7 +172,11 @@ body {
 .resistance {
   margin-top: 3rem;
 }
-
+.resist-3bands {
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
 .resist-tab {
   display: flex;
   flex-wrap: wrap;

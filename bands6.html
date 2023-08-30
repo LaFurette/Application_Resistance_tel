@@ -21,14 +21,14 @@
       <option value="GΩ">GΩ</option>
     </select>
     <select class="resist-purcent" name="" id="">
-          <option value="±1%">±1%</option>
-          <option value="±2%">±2%</option>
-          <option value="±0.5%">±0.5%</option>
-          <option value="±0.25%">±0.25%</option>
-          <option value="±0.1%">±0.1%</option>
-          <option value="±0.05%">±0.05%</option>
-          <option value="±5%">±5%</option>
-          <option value="±10%">±10%</option>
+      <option value="±1%">±1%</option>
+        <option value="±2%">±2%</option>
+        <option value="±0.5%">±0.5%</option>
+        <option value="±0.25%">±0.25%</option>
+        <option value="±0.1%">±0.1%</option>
+        <option value="±0.05%">±0.05%</option>
+        <option value="±5%">±5%</option>
+        <option value="±10%">±10%</option>
     </select>
   </div>
   <div class="resistance-container">
@@ -43,11 +43,19 @@
           <div class="value">-</div>
           <div class="band-connector"></div>
         </div>
+        <div class="band band5">
+          <div class="value">-</div>
+          <div class="band-connector"></div>
+        </div>
         <div class="band band3">
           <div class="value">-</div>
           <div class="band-connector"></div>
         </div>
-        <div class="band band4">
+        <div class="band resist6 band4">
+          <div class="value">-</div>
+          <div class="band-connector"></div>
+        </div>
+        <div class="band band6">
           <div class="value">-</div>
           <div class="band-connector"></div>
         </div>
@@ -91,6 +99,22 @@
     </div>
     <div class="color-select">
       <select>
+        <option value="" disabled selected>Anneau 3</option>
+        <option value="0" style="background-color: #000; color: #fff;">Noir</option>
+        <option value="1" style="background-color: #7a4227; color: #fff;">Marron</option>
+        <option value="2" style="background-color: #e21619; color: #fff;">Rouge</option>
+        <option value="3" style="background-color: #f18809; color: #fff;">Orange</option>
+        <option value="4" style="background-color: #ffdc0e; color: #000;">Jaune</option>
+        <option value="5" style="background-color: #02c602; color: #fff;">Vert</option>
+        <option value="6" style="background-color: #0000FF; color: #fff;">Bleu</option>
+        <option value="7" style="background-color: #8744aa; color: #fff;">Violet</option>
+        <option value="8" style="background-color: #7e8892; color: #fff;">Gris</option>
+        <option value="9" style="background-color: #fff; color: #000;">Blanc</option>
+
+      </select>
+    </div>
+    <div class="color-select">
+      <select>
         <option value="" disabled selected>Multiplicateur</option>
         <option value="x1Ω" style="background-color: #000; color: #fff;">Noir</option>
         <option value="x10Ω" style="background-color: #7a4227; color: #fff;">Marron</option>
@@ -118,6 +142,18 @@
         <option value="±0.05%" style="background-color: #7e8892; color: #fff;">Gris</option>
         <option value="±5%" style="background-color: #FFD700; color: #000;">Or</option>
         <option value="±10%" style="background-color: #C0C0C0; color: #000;">Argent</option>
+
+      </select>
+    </div>
+    <div class="color-select">
+      <select>
+        <option value="" disabled selected>PPM/K</option>
+        <option value="100ppm" style="background-color: #7a4227; color: #fff;">Marron</option>
+        <option value="50ppm" style="background-color: #e21619; color: #fff;">Rouge</option>
+        <option value="15ppm" style="background-color: #f18809; color: #fff;">Orange</option>
+        <option value="25ppm" style="background-color: #ffdc0e; color: #000;">Jaune</option>
+        <option value="10ppm" style="background-color: #0000FF; color: #fff;">Bleu</option>
+        <option value="5ppm" style="background-color: #8744aa; color: #fff;">Violet</option>
 
       </select>
     </div>
