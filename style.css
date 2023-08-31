@@ -202,6 +202,7 @@ body {
     text-transform: uppercase;
     text-align: center;
     border-radius: 7px;
+    padding: 0 10px;
   }
  .color-select select:focus-visible{
     outline: none;
@@ -217,4 +218,9 @@ body {
 
   select option:checked {
     color: inherit!important;
+  }
+  .center-last {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }

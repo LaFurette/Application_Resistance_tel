@@ -26,6 +26,15 @@ document.addEventListener('DOMContentLoaded', function () {
     return 1; 
   }
 
+  function simulateClick(element) {
+    const event = new MouseEvent('click', {
+      bubbles: true,
+      cancelable: true,
+      view: window
+    });
+    element.dispatchEvent(event);
+  }
+
   function updateResistanceValue() {
     const numBands = colorSelects.length;
 
@@ -64,25 +73,10 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!isNaN(resistanceValue)) {
       resistInput.value = resistanceValue;
     } else {
-      resistInput.value = 'Inconnue';
+      resistInput.value = '';
     }
   }
   
-
-  // function updateResistanceValue() {
-  //   const firstBandValue = Number(resistorBands.children[0].querySelector('.value').textContent);
-  //   const secondBandValue = Number(resistorBands.children[1].querySelector('.value').textContent);
-  //   const thirdBandValue = resistorBands.children[2].querySelector('.value').textContent;
-  //   const thirdBandMultiplier = parseMultiplier(thirdBandValue);
-
-  //   if (!isNaN(firstBandValue) && !isNaN(secondBandValue) && !isNaN(thirdBandMultiplier)) {
-  //     const resistanceValue = (firstBandValue * 10 + secondBandValue) * thirdBandMultiplier;
-  //     resistInput.value = resistanceValue;
-  //   } else {
-  //     resistInput.value = 'Inconnue';
-  //   }
-  // }
-
   const colorSelects = document.querySelectorAll('.color-select select');
   const resistorBands = document.querySelector('.resistance-container .resistor-bands');
   const resistInput = document.querySelector('.resist-input');
@@ -119,22 +113,35 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       updateResistanceValue();
+      formatAndSimulateClick();
     });
   });
 
 
   function updateResistanceBasedOnMultiplier() {
     const selectedMultiplier = resistOhmSelect.value;
-
+    let resistValue = parseFloat(resistInput.value.replace(/\s+/g, '')); // Remove whitespace
+  
     if (selectedMultiplier === 'kΩ') {
-      resistInput.value /= 1000;
+      resistValue /= 1000;
     } else if (selectedMultiplier === 'MΩ') {
-      resistInput.value /= 1000000;
+      resistValue /= 1000000;
     } else if (selectedMultiplier === 'GΩ') {
-      resistInput.value /= 1000000000;
-    } else {
-      
+      resistValue /= 1000000000;
     }
+  
+    if (resistValue === Math.floor(resistValue)) {
+      resistInput.value = resistValue.toFixed(0); // Format as whole number if no decimal places
+    
+    } else {
+      resistInput.value = resistValue.toFixed(2); // Format to 2 decimal places
+    }  
+    formatAndSimulateClick();
+  }
+  function formatAndSimulateClick() {
+    formatInputValue();
+    // Simulate click out of the resist input element
+    resistInput.blur();
   }
 
   function formatInputValue() {
@@ -150,6 +157,7 @@ document.addEventListener('DOMContentLoaded', function () {
   resistInput.addEventListener('keyup', formatInputValue);
 
   formatInputValue();
+  
 
 
 
