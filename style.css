@@ -1,182 +1,251 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('img/background.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .logo {
-    margin-bottom: 10px;
-    margin-top: 3rem;
-  }
-  .logo_STN {
-    width: 200px;
-  }
-  
-  .resistor-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .resistor {
-    width: 220px;
-    height: 70px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    margin: 13px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 1rem;
-  }
-  .resistor:hover {
-    transform: scale(1.05);
-    filter: brightness(0.9);
-  }
-  
-  .resistor img {
-    max-width: 100%;
-    max-height: 100%;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background-image: url('img/background.png');
+  background-size: cover;
+  background-position: center; */
+  background: rgb(125,30,144);
+  background: linear-gradient(180deg, rgba(125,30,144,0.1741946778711485) 6%, rgba(125,30,144,1) 99%);  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
 
-  /* 2ND SCREEN */
+.logo {
+  margin-bottom: 5px;
+  margin-top: 1rem;
+}
 
-  .ohm {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    background-color: #000;
-    box-sizing: border-box;
-    padding: 0px;
-  } 
-  .resist {
-    font-size: 36px;
-    font-weight: bold;
-    color: #fff;
-    padding: 0 0.5rem;
-    margin: 10px 0;
-  }
-  
-  .resist-input {
-    width: 100%;
-    padding: 10px;
-    margin: 0 5px 0 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .resist-ohm,
-  .resist-purcent {
-    appearance: none;
-    background-color: #282727;
-    padding: 9px 7px;
-    width: 70px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    cursor: pointer;
-    color: #fff;
-    margin: 0 0.4rem;
-    text-align-last: center; 
-    font-weight: bold;
-    font-size: 16px;
-  }
-  .resist-ohm option,
-  .resist-purcent option {
-    font-size: 13px;
-    font-weight: bold;
-    max-width: 100%;
-  }
-  
-  .resist-ohm::-ms-expand,
-  .resist-purcent::-ms-expand,
-  .color-select select::-ms-expand {
-    display: none;
-  }
+.logo_STN {
+  width: 130px;
+}
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.resistor-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .resist-vierge {
-    width: 100%;
+.resistor {
+  width: 220px;
+  height: 50px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px 6px 15px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+}
 
-  }
-  .resistance {
-    position: relative;
-  }
+.resistor:hover {
+  transform: scale(1.05);
+  filter: brightness(0.9);
+}
 
-  .resistor-bands .band {
-    position: absolute;
-    top: 3px;
-    width: 14px;
-    height: 90%;
-    background: #e9e9e9;
-  }
-  .resistor-bands .value {
-    position: absolute;
-    background-color: #e9e9e9;
-    text-align: center ;
-    padding: 1px 4px;
-    height: 15px;
-    left: -7px;
-    top: 120px ;
-    min-width: 20px;
-    border-radius: 5px;
-    font-size: 13px;
-  }
+.resistor img {
+  max-width: 100%;
+  max-height: 100%;
+}
 
-  .band1 {
-    left: 25%;
-  }
-  .band2 {
-    left: 33%;
-  }
-  .band3 {
-    left: 50%;
-  }
-  .band4 {
-    left: 72%;
-  }
-  .band5 {
-    left: 41%;
-  }
-  .band6 {
-    left: 72%;
-  }
-  .resist6.band4 {
-    left: 62.5%;
-  }
+/* 2ND SCREEN */
+
+.ohm {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #000;
+  box-sizing: border-box;
+  padding: 0px;
+}
+
+.resist {
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  padding: 0 0.5rem;
+  margin: 10px 0;
+}
+
+.resist-input {
+  width: 100%;
+  padding: 10px;
+  margin: 0 5px 0 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.resist-ohm
+ {
+  appearance: none;
+  background-color: #282727;
+  padding: 9px 7px;
+  width: 70px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  margin: 0 0.4rem;
+  text-align-last: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+.resist-purcent {
+  appearance: none;
+  background-color: #fff;
+  padding: 9px 7px;
+  width: 70px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #000;
+  margin: 0 0.4rem;
+  text-align-last: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+select:disabled {
+  opacity: 1;
+}
+
+.resist-ohm option,
+.resist-purcent option {
+  font-size: 13px;
+  font-weight: bold;
+  max-width: 100%;
+}
+
+.resist-ohm::-ms-expand,
+.resist-purcent::-ms-expand,
+.color-select select::-ms-expand {
+  display: none;
+}
+
+.resist-table {
+  display: none;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.resist-table th, .resist-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.resist-table th {
+  background-color: #f0f0f0;
+}
+
+.resist-table tbody tr:first-child td {
+  background-color: #f0f0f0;
+}
+
+.resist-table tbody tr:first-child td:first-child {
+  border-radius: 5px 0 0 0;
+}
+
+.resist-table tbody tr:first-child td:last-child {
+  border-radius: 0 5px 0 0;
+}
 
 
 
-  .resistor-bands .band-connector {
-    position: absolute;
-    z-index: -1;
-    top: 80px; 
-    left: 50%;
-    transform: translateX(-50%);
-    width: 7px; 
-    height: 45px; 
-    opacity: 0.3;
-  }
 
-  /* BANDES */
- 
+.resist-vierge {
+  width: 100%;
+
+}
+
+.resistance {
+  position: relative;
+}
+
+
+.resistor-bands .band {
+  position: absolute;
+  top: 3px;
+  width: 14px;
+  height: 90%;
+  background: #e9e9e9;
+}
+
+.resistor-bands .value {
+  position: absolute;
+  background-color: #e9e9e9;
+  text-align: center;
+  padding: 1px 4px;
+  height: 15px;
+  left: -7px;
+  top: 120px;
+  min-width: 20px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+.band1 {
+  left: 25%;
+}
+
+.band2 {
+  left: 33%;
+}
+
+.band3 {
+  left: 50%;
+}
+
+.band4 {
+  left: 72%;
+}
+
+.band5 {
+  left: 41%;
+}
+
+.band6 {
+  left: 72%;
+}
+
+.resist6.band4 {
+  left: 62.5%;
+}
+
+
+
+.resistor-bands .band-connector {
+  position: absolute;
+  z-index: -1;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 7px;
+  height: 45px;
+  opacity: 0.3;
+}
+
+/* BANDES */
+
 
 /* BANDE */
 .resistance {
   margin-top: 3rem;
 }
+
 .resist-3bands {
   flex-direction: column;
   align-items: center;
   width: 80%;
 }
+
 .resist-tab {
   display: flex;
   flex-wrap: wrap;
@@ -185,42 +254,59 @@ body {
   margin-top: 20px;
   margin-top: 4rem;
 }
-  
-  .color-select {
-    width: calc(50% - 20px);
-    margin: 1rem 0rem;
-    border: 2px solid #000;
-    border-radius: 10px;
-  }
-  
-  .color-select select {
-    width: 100%;
-    height: 60px;
-    background-color: transparent;
-    appearance: none;
-    font-size: 14px;
-    text-transform: uppercase;
-    text-align: center;
-    border-radius: 7px;
-    padding: 0 10px;
-  }
- .color-select select:focus-visible{
-    outline: none;
-  }
-  .color-select select:focus{
-    box-shadow: 0px 0px 9px 3px #000;
-  }
 
-  .color-select select option {
-    text-align: center;
-    padding: 0.5rem 0;
-  }
+.color-select {
+  width: calc(50% - 10px);
+  margin: 1rem 0rem;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  
+}
 
-  select option:checked {
-    color: inherit!important;
+.color-select select {
+  width: 100%;
+  height: 60px;
+  background-color: transparent;
+  appearance: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 7px;
+  padding: 0 10px;
+  max-height: 100px!important;
+  overflow-y: auto !important;
+}
+select:not(:-internal-list-box) {
+  overflow: auto !important;
+
+}
+
+.color-select select:focus-visible {
+  outline: none;
+}
+
+.color-select select:focus {
+  box-shadow: 0px 0px 9px 3px #000;
+}
+
+.color-select select option {
+  text-align: center;
+  padding: 0.5rem!important;
+}
+
+select option:checked {
+  color: inherit !important;
+}
+
+.center-last {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Responsive styles using media queries */
+@media (max-width: 768px) {
+  .resistor {
+    max-width: 200px;
   }
-  .center-last {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
+}

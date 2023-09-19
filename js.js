@@ -43,6 +43,11 @@ document.addEventListener('DOMContentLoaded', function () {
     let thirdBandValue = 0;
     let fourthBandValue = 0;
     let multiplierValue = 1;
+    const kiloCell = document.querySelector('.kilo');
+    const megaCell = document.querySelector('.mega');
+    const gigaCell = document.querySelector('.giga');
+    const resistTable = document.querySelector('.resist-table');
+
 
     if (numBands >= 3) {
       firstBandValue = Number(colorSelects[0].value);
@@ -71,10 +76,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (!isNaN(resistanceValue)) {
-      resistInput.value = resistanceValue;
+      // resistInput.value = resistanceValue;
+      resistInput.value = `${parseFloat(resistanceValue).toExponential()}` + "     " + `(${resistanceValue})`;      resistTable.style.display = 'table';
+      console.log(resistInput.value)
+      kiloCell.textContent = (resistanceValue / 1000).toFixed(2);
+      megaCell.textContent = (resistanceValue / 1000000).toFixed(2);
+      gigaCell.textContent = (resistanceValue / 1000000000).toFixed(2);
     } else {
       resistInput.value = '';
     }
+
   }
   
   const colorSelects = document.querySelectorAll('.color-select select');
@@ -118,26 +129,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
-  function updateResistanceBasedOnMultiplier() {
-    const selectedMultiplier = resistOhmSelect.value;
-    let resistValue = parseFloat(resistInput.value.replace(/\s+/g, '')); // Remove whitespace
-  
-    if (selectedMultiplier === 'kΩ') {
-      resistValue /= 1000;
-    } else if (selectedMultiplier === 'MΩ') {
-      resistValue /= 1000000;
-    } else if (selectedMultiplier === 'GΩ') {
-      resistValue /= 1000000000;
-    }
-  
-    if (resistValue === Math.floor(resistValue)) {
-      resistInput.value = resistValue.toFixed(0); // Format as whole number if no decimal places
-    
-    } else {
-      resistInput.value = resistValue.toFixed(2); // Format to 2 decimal places
-    }  
-    formatAndSimulateClick();
-  }
   function formatAndSimulateClick() {
     formatInputValue();
     // Simulate click out of the resist input element

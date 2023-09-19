@@ -14,14 +14,13 @@
       R
     </p>
     <input class="resist-input" type="text">
-    <select class="resist-ohm" name="" id="">
-      <option value="Ω">Ω</option>
-      <option value="kΩ">kΩ</option>
+    <p class="resist-ohm" name="" id="">Ω
+      <!-- <option value="kΩ">kΩ</option>
       <option value="MΩ">MΩ</option>
-      <option value="GΩ">GΩ</option>
-    </select>
-      <select class="resist-purcent" name="" id="">
-        <option value="±1%">±1%</option>
+      <option value="GΩ">GΩ</option> -->
+    </p>
+    <select class="resist-purcent" name="" id="" disabled>
+          <option value="±1%">±1%</option>
           <option value="±2%">±2%</option>
           <option value="±0.5%">±0.5%</option>
           <option value="±0.25%">±0.25%</option>
@@ -29,8 +28,24 @@
           <option value="±0.05%">±0.05%</option>
           <option value="±5%">±5%</option>
           <option value="±10%">±10%</option>
-      </select>
+    </select>
   </div>
+  <table class="resist-table">
+    <thead>
+      <tr>
+        <th>kΩ</th>
+        <th>MΩ</th>
+        <th>GΩ</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="kilo"></td>
+        <td class="mega"></td>
+        <td class="giga"></td>
+      </tr>
+    </tbody>
+  </table>
   <div class="resistance-container">
     <div class="resistance">
       <img class="resist-vierge" src="img/resist.png" alt="">
