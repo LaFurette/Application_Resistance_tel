@@ -13,21 +13,16 @@
     <p class="resist">
       R
     </p>
-    <input class="resist-input" type="text">
-    <p class="resist-ohm" name="" id="">Ω
-      <!-- <option value="kΩ">kΩ</option>
+    <!-- <input class="resist-input" type="text"> -->
+    <div class="resist-input">
+      <input class="resist-input-scientific" type="text" placeholder="4.3e+7">
+      <input class="resist-input-original" type="text" placeholder="43000000">
+    </div>
+    <select class="resist-ohm" name="" id="">
+      <option value="Ω">Ω</option>
+      <option value="kΩ">kΩ</option>
       <option value="MΩ">MΩ</option>
-      <option value="GΩ">GΩ</option> -->
-    </p>
-    <select class="resist-purcent" name="" id="" disabled>
-          <option value="±1%">±1%</option>
-          <option value="±2%">±2%</option>
-          <option value="±0.5%">±0.5%</option>
-          <option value="±0.25%">±0.25%</option>
-          <option value="±0.1%">±0.1%</option>
-          <option value="±0.05%">±0.05%</option>
-          <option value="±5%">±5%</option>
-          <option value="±10%">±10%</option>
+      <option value="GΩ">GΩ</option>
     </select>
   </div>
   <table class="resist-table">
@@ -62,13 +57,13 @@
           <div class="value">-</div>
           <div class="band-connector"></div>
         </div>
-        
+
       </div>
     </div>
   </div>
-  
+
   <div class="resist-tab resist-3bands">
-    
+
     <div class="color-select">
       <select>
         <option value="" disabled selected>Anneau 1</option>
@@ -119,9 +114,9 @@
 
       </select>
     </div>
-    
-    
-    
+
+
+
   </div>
 
 

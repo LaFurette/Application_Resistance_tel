@@ -1,15 +1,13 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  /* background-image: url('img/background.png');
-  background-size: cover;
-  background-position: center; */
   background: rgb(125,30,144);
   background: linear-gradient(180deg, rgba(125,30,144,0.1741946778711485) 6%, rgba(125,30,144,1) 99%);  display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  max-width: 520px;
 }
 
 .logo {
@@ -61,6 +59,8 @@ body {
 .ohm {
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   width: 100%;
   background-color: #000;
   box-sizing: border-box;
@@ -77,8 +77,20 @@ body {
 
 .resist-input {
   width: 100%;
-  padding: 10px;
   margin: 0 5px 0 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+}
+.resist-input-scientific {
+  width: 25%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.resist-input-original {
+  width: 75%;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
@@ -304,7 +316,6 @@ select option:checked {
   text-align: center;
 }
 
-/* Responsive styles using media queries */
 @media (max-width: 768px) {
   .resistor {
     max-width: 200px;

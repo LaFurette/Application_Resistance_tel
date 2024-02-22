@@ -13,13 +13,18 @@
     <p class="resist">
       R
     </p>
-    <input class="resist-input" type="text">
-    <p class="resist-ohm" name="" id="">Ω
-      <!-- <option value="kΩ">kΩ</option>
+    <!-- <input class="resist-input" type="text"> -->
+    <div class="resist-input">
+      <input class="resist-input-scientific" type="text" placeholder="4.3e+7" >
+      <input class="resist-input-original" type="text" placeholder="43000000">
+    </div>
+    <select class="resist-ohm" name="" id="">
+      <option value="Ω">Ω</option>
+      <option value="kΩ">kΩ</option>
       <option value="MΩ">MΩ</option>
-      <option value="GΩ">GΩ</option> -->
-    </p>
-    <select class="resist-purcent" name="" id="" disabled>
+      <option value="GΩ">GΩ</option>
+      </select>
+    <select class="resist-purcent" name="" id="">
           <option value="±1%">±1%</option>
           <option value="±2%">±2%</option>
           <option value="±0.5%">±0.5%</option>
